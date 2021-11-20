@@ -1,0 +1,147 @@
+:root{
+    --clr-neon: hsl(220 100% 54%);
+    --clr-bg: hsl(290 30% 8%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+    background: var(--clr-bg);
+    font-family: 'Coming Soon', cursive;
+}
+h1, h2{
+    font-family: 'Coming Soon', cursive;
+    text-align: center;
+    color: rgb(27, 191, 197);
+    text-shadow: 0 0 30px hsl(110 0% 100% / 0.30), 0 0 10px var(--clr-neon);
+
+}
+.flex-wrapper{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.add-todo-wrapper{
+    display: flex;
+    width: 500px;
+    min-height: 40px;
+    align-items: center;
+    border: currentColor 4px solid;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--clr-neon);
+    text-shadow: 0 0 5px currentColor;
+    box-shadow: 0 0 15px 0 var(--clr-neon);
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-wrapper input{
+    width: 100%;
+    height: 35px;
+    font-size: 22px;
+    background: rgba(155, 11, 11, 0.13);
+    color: rgb(255, 89, 89);
+    text-shadow: 0 0 30px hsl(110 0% 100% / 0.30), 0 0 5px currentColor;
+    box-shadow: 0 0 5px 0 var(--clr-neon);
+    outline: none;
+}
+
+
+.button-wrapper{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0 0 20px;
+}
+
+
+#add-task-btn{
+    border: none;
+    border-radius: 5px;
+    color: rgb(27, 191, 197);
+    background: var(--clr-bg);
+    height: 35px;
+    cursor: pointer;
+    text-shadow: 0 0 30px hsl(110 0% 100% / 0.30), 0 0 5px var(--clr-neon);
+    box-shadow: 0 0 7px 0 var(--clr-neon);
+}
+
+.todo-item{
+    display: flex;
+    width: 500px;
+    min-height: 50px;
+    border: rgb(110, 255, 122) 2px solid;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgb(110, 255, 122);
+    
+}
+
+.todo-item.checked{
+    background-color: darkgray;
+    opacity: .5;
+}
+
+.todo-item.delition{
+    animation: opacity 1s ease-in;
+}
+
+.description{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: rgb(252, 255, 89);
+    text-shadow: 0 0 6px hsl(110 0% 100% / 0.30), 0 0 5px var(--clr-neon);
+}
+
+
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.buttons input{
+    width: 60px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.btn-delete{
+    outline: none;
+    border: none;
+    background: var(--clr-bg);
+    color: rgb(255, 89, 89);
+    cursor: pointer;
+    width: 82px;
+    height: 35px;
+    border-radius: 5px;
+    text-shadow: 0 0 30px hsl(110 0% 100% / 0.30), 0 0 5px var(--clr-neon);
+    box-shadow: 0 0 10px 0 rgb(255, 89, 89);
+}
+
+@keyframes opacity{
+    from {
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
